@@ -1,7 +1,20 @@
-jobname = cloze
+jobname = boilerplate
 texmf = $(HOME)/texmf
 texmftex = $(texmf)/tex/luatex
 installdir = $(texmftex)/$(jobname)
+
+all: install doc
+
+install: uninstall_texlive install_quick
+
+uninstall_texlive:
+	-tlmgr uninstall --force boilerplate
+
+install_quick:
+	mkdir -p $(installdir)
+	cp -f $(jobname).lua $(installdir)
+	cp -f $(jobname).sty $(installdir)
+	cp -f $(jobname).tex $(installdir)
 
 doc: doc_pdf doc_lua
 
@@ -32,6 +45,26 @@ ctan: doc_pdf
 	cp -f documentation.tex $(jobname)/
 	tar cvfz $(jobname).tar.gz $(jobname)
 	rm -rf $(jobname)
+
+# test: install test_lua test_examples test_tex doc_pdf
+test: install test_lua
+
+test_lua:
+	busted --lua=/usr/bin/lua5.3 --exclude-tags=skip tests/lua/test-*.lua
+
+test_examples: test_examples_lua test_examples_plain test_examples_latex
+test_examples_lua:
+	busted --pattern "**/*.lua" examples
+test_examples_plain:
+	find examples -iname "*plain.tex" -exec luatex --output-dir=examples {} \;
+test_examples_latex:
+	find examples -iname "*latex.tex" -exec latexmk -lualatex -cd --output-directory=examples {} \;
+
+test_tex: test_tex_plain test_tex_latex
+test_tex_plain:
+	find tests/tex/plain -iname "*.tex" -exec luatex --output-dir=tests/tex/plain {} \;
+test_tex_latex:
+	find tests/tex/latex -iname "*.tex" -exec lualatex --output-dir=tests/tex/latex {} \;
 
 clean:
 	git clean -fdx

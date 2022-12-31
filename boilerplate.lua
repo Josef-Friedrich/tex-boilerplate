@@ -18,6 +18,6 @@
 
 return {
   boilerplate = function ()
-    print('boilerplate')
+    return 'boilerplate'
   end
 }
