@@ -1,0 +1,15 @@
+_minted*/
+*.aux
+*.fdb_latexmk
+*.fls
+*.glo
+*.hd
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.pdf
+*.synctex
+*.synctex.gz
+*.toc

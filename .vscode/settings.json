@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    "**/_minted*/": true,
+    "**/*.aux": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.glo": true,
+    "**/*.hd": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.pdf": true,
+    "**/*.synctex": true,
+    "**/*.synctex.gz": true,
+    "**/*.toc": true
+  }
+}

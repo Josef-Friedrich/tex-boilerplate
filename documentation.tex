@@ -1,0 +1,88 @@
+\documentclass{ltxdoc}
+
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{multicol}
+\usepackage{luacode}
+\usepackage{syntax}
+
+\usemintedstyle{friendly}
+\BeforeBeginEnvironment{minted}{\begin{mdframed}}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+\setminted{
+  breaklines=true,
+  fontsize=\footnotesize,
+  style=manni,
+}
+\def\lua#1{\mintinline{lua}|#1|}
+\def\latex#1{\mintinline{latex}|#1|}
+
+\NewDocumentCommand { \InputLatex } { O{} m } {
+  \begin{mdframed}
+  \inputminted[linenos=false,#1]{latex}{examples/#2}
+  \end{mdframed}
+}
+
+\NewDocumentCommand { \InputLua } { O{} m } {
+  \begin{mdframed}
+  \inputminted[linenos=false,#1]{lua}{examples/#2}
+  \end{mdframed}
+}
+
+\begin{document}
+
+\providecommand*{\url}{\texttt}
+
+\title{The \textsf{boilerplate} package}
+\author{%
+  Josef Friedrich\\%
+  \url{josef@friedrich.rocks}\\%
+  \href{https://github.com/Josef-Friedrich/tex-project-boilerplate}
+       {github.com/Josef-Friedrich/tex-project-boilerplate}%
+}
+\date{0.1.0 from 2022/12/30}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+% \section{Einführung}
+\section{Introduction}
+
+\clearpage
+
+\section{Implementation}
+
+%%
+%
+%%
+
+\subsection{boilerplate.lua}
+
+\inputminted[linenos=true]{lua}{boilerplate.lua}
+
+%%
+%
+%%
+
+\clearpage
+
+\subsection{boilerplate.tex}
+
+\inputminted[linenos=true]{latex}{boilerplate.tex}
+
+\changes{0.1.0}{2022/12/30}{Inital release}
+
+\pagebreak
+\PrintChanges
+\pagebreak
+\PrintIndex
+\end{document}
