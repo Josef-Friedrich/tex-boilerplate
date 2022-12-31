@@ -5,6 +5,7 @@
     "**/*.fdb_latexmk": true,
     "**/*.fls": true,
     "**/*.glo": true,
+    "**/*.gls": true,
     "**/*.hd": true,
     "**/*.idx": true,
     "**/*.ilg": true,
@@ -12,8 +13,9 @@
     "**/*.log": true,
     "**/*.out": true,
     "**/*.pdf": true,
-    "**/*.synctex": true,
     "**/*.synctex.gz": true,
+    "**/*.synctex": true,
+    "**/*.tar.gz": true,
     "**/*.toc": true
   },
   "Lua.diagnostics.globals": [
