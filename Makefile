@@ -20,4 +20,20 @@ doc_lua_open:
 	ldoc .
 	xdg-open docs/index.html
 
+ctan: doc_pdf
+	rm -rf $(jobname).tar.gz
+	rm -rf $(jobname)/
+	mkdir $(jobname)
+	cp -f README.md $(jobname)/
+	cp -f $(jobname).lua $(jobname)/
+	cp -f $(jobname).sty $(jobname)/
+	cp -f $(jobname).tex $(jobname)/
+	cp -f documentation.pdf $(jobname)/$(jobname).pdf
+	cp -f documentation.tex $(jobname)/
+	tar cvfz $(jobname).tar.gz $(jobname)
+	rm -rf $(jobname)
+
+clean:
+	git clean -fdx
+
 .PHONY: all install doc doc_pdf doc_lua test test_luatex test_lualatex clean ctan
