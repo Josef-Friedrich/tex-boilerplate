@@ -15,5 +15,34 @@
     "**/*.synctex": true,
     "**/*.synctex.gz": true,
     "**/*.toc": true
-  }
+  },
+  "Lua.diagnostics.globals": [
+    // LuaTeX
+    "callback",
+    "fontloader", // 12 The fontloader
+    "img", // 11.1 The img library
+    "kpse", // 10.7 The kpse library
+    "lua", // 10.1 The lua library
+    "luaharfbuzz", // 13.1 The luaharfbuzz library
+    "node",
+    "status", // 10.2 The status library
+    "tex", // 10.3 The tex library
+    "texconfig", // 10.4 The texconfig table
+    "texio", // 10.5 The texio library
+    "token", // 10.6 The token library
+
+    // luatexbase
+    "luatexbase",
+
+    // busted
+    "describe",
+    "it",
+    "setup",
+    "teardown"
+  ],
+  // https://github.com/sumneko/lua-language-server/wiki/Libraries
+  "Lua.workspace.library": [
+    // https://github.com/sumneko/lua-language-server/tree/master/meta/3rd
+    "${3rd}/luassert/library"
+  ]
 }
