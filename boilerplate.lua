@@ -15,3 +15,9 @@
 --
 -- This work consists of the files boilerplate.lua, boilerplate.tex,
 -- and boilerplate.sty.
+
+return {
+  boilerplate = function ()
+    print('boilerplate')
+  end
+}
