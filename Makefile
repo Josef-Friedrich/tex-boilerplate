@@ -67,6 +67,6 @@ test_tex_latex:
 	find tests/tex/latex -iname "*.tex" -exec lualatex --output-dir=tests/tex/latex {} \;
 
 clean:
-	git clean -fdx
+	git clean -d -x --force
 
 .PHONY: all install doc doc_pdf doc_lua test test_luatex test_lualatex clean ctan
