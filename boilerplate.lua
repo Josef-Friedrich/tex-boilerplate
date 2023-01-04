@@ -70,9 +70,7 @@ local ansi_color = (function()
   ---
   ---@return string
   local function format_color_code(code)
-    return string.char(27) .. '[' .. tostring(code) .. 'm'    ---
-    ---@param text string
-    ---    ---
+    return string.char(27) .. '[' .. tostring(code) .. 'm'
   end
 
   ---
@@ -197,7 +195,16 @@ end)()
 ---Small logging library.
 ---
 ---The upstream source is located at: [boilerplate.lua](https://github.com/Josef-Friedrich/tex-project-boilerplate/blob/main/boilerplate.lua)
---
+---
+---Log levels:
+---
+---* 0: silent
+---* 1: error (red)
+---* 2: warn (yellow)
+---* 3: info (green)
+---* 4: verbose (blue)
+---* 5: debug (magenta)
+---
 local log = (function()
   local opts = { verbosity = 0 }
 
@@ -205,25 +212,44 @@ local log = (function()
     print(string.format(message, ...))
   end
 
-  local function info(message, ...)
-    if opts.verbosity > 0 then
+  local function error(message, ...)
+    if opts.verbosity >= 1 then
       print_message(message, ...)
     end
   end
 
-  local function debug(message, ...)
-    if opts.verbosity > 1 then
+  local function warn(message, ...)
+    if opts.verbosity >= 2 then
+      print_message(message, ...)
+    end
+  end
+
+  local function info(message, ...)
+    if opts.verbosity >= 3 then
       print_message(message, ...)
     end
   end
 
   local function verbose(message, ...)
-    if opts.verbosity > 2 then
+    if opts.verbosity >= 4 then
       print_message(message, ...)
     end
   end
 
-  return { opts = opts, info = info, debug = debug, verbose = verbose }
+  local function debug(message, ...)
+    if opts.verbosity >= 5 then
+      print_message(message, ...)
+    end
+  end
+
+  return {
+    opts = opts,
+    error = error,
+    warn = warn,
+    info = info,
+    verbose = verbose,
+    debug = debug,
+  }
 end)()
 
 log.opts.verbosity = 3
