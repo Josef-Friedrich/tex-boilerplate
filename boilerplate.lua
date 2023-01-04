@@ -132,7 +132,7 @@ local ansi_color = (function()
     return output .. format_color_code(code)
   end
 
-  ---
+  ---@param text any
   ---@param color ColorName # A color name.
   ---@param mode? ColorMode
   ---@param background? boolean # Colorize the background not the text.
@@ -146,7 +146,7 @@ local ansi_color = (function()
 
   return {
     ---
-    ---@param text string
+    ---@param text any
     ---
     ---@return string
     red = function(text)
@@ -154,7 +154,7 @@ local ansi_color = (function()
     end,
 
     ---
-    ---@param text string
+    ---@param text any
     ---
     ---@return string
     green = function(text)
@@ -162,7 +162,7 @@ local ansi_color = (function()
     end,
 
     ---
-    ---@param text string
+    ---@param text any
     ---
     ---@return string
     white = function(text)
@@ -174,7 +174,7 @@ local ansi_color = (function()
     end,
 
     ---
-    ---@param text string
+    ---@param text any
     ---
     ---@return string
     blue = function(text)
@@ -182,7 +182,7 @@ local ansi_color = (function()
     end,
 
     ---
-    ---@param text string
+    ---@param text any
     ---
     ---@return string
     cyan = function(text)
