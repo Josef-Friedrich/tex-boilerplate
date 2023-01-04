@@ -206,38 +206,38 @@ end)()
 ---* 5: debug (magenta)
 ---
 local log = (function()
-  local opts = { verbosity = 0 }
+  local opts = { level = 0 }
 
   local function print_message(message, ...)
     print(string.format(message, ...))
   end
 
   local function error(message, ...)
-    if opts.verbosity >= 1 then
+    if opts.level >= 1 then
       print_message(message, ...)
     end
   end
 
   local function warn(message, ...)
-    if opts.verbosity >= 2 then
+    if opts.level >= 2 then
       print_message(message, ...)
     end
   end
 
   local function info(message, ...)
-    if opts.verbosity >= 3 then
+    if opts.level >= 3 then
       print_message(message, ...)
     end
   end
 
   local function verbose(message, ...)
-    if opts.verbosity >= 4 then
+    if opts.level >= 4 then
       print_message(message, ...)
     end
   end
 
   local function debug(message, ...)
-    if opts.verbosity >= 5 then
+    if opts.level >= 5 then
       print_message(message, ...)
     end
   end
@@ -252,7 +252,7 @@ local log = (function()
   }
 end)()
 
-log.opts.verbosity = 3
+log.opts.level = 3
 
 return {
   boilerplate = function()
