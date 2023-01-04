@@ -161,13 +161,6 @@ local ansi_color = (function()
       return surround_text(text, 'green')
     end,
 
-    ---
-    ---@param text any
-    ---
-    ---@return string
-    white = function(text)
-      return surround_text(text, 'white')
-    end,
     ---@return string
     yellow = function(text)
       return surround_text(text, 'yellow')
@@ -179,6 +172,14 @@ local ansi_color = (function()
     ---@return string
     blue = function(text)
       return surround_text(text, 'blue')
+    end,
+
+    ---
+    ---@param text any
+    ---
+    ---@return string
+    magenta = function(text)
+      return surround_text(text, 'magenta')
     end,
 
     ---
