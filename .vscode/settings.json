@@ -48,6 +48,9 @@
     "${3rd}/busted/library",
     // https://github.com/Josef-Friedrich/LuaTeX_Lua-API
     "~/repos/tex/lua-api/library",
-    "~/texmf/tex"
+    "~/repos/tex/cloze/cloze.lua",
+    "~/repos/tex/farbe/farbe.lua",
+    "~/repos/tex/luakeys/luakeys.lua",
+    "~/repos/tex/nodetree/nodetree.lua"
   ]
 }
