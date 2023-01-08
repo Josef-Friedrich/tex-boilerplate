@@ -52,5 +52,6 @@
     "~/repos/tex/farbe/farbe.lua",
     "~/repos/tex/luakeys/luakeys.lua",
     "~/repos/tex/nodetree/nodetree.lua"
-  ]
+  ],
+  "latex-workshop.latex.autoBuild.run": "never"
 }
