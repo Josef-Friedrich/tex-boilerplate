@@ -19,12 +19,12 @@ install_quick:
 doc: doc_pdf doc_lua
 
 doc_pdf:
-	lualatex --shell-escape documentation.tex
-	makeindex -s gglo.ist -o documentation.gls documentation.glo
-	makeindex -s gind.ist -o documentation.ind documentation.idx
-	lualatex --shell-escape documentation.tex
+	lualatex --shell-escape boilerplate-doc.tex
+	makeindex -s gglo.ist -o boilerplate-doc.gls boilerplate-doc.glo
+	makeindex -s gind.ist -o boilerplate-doc.ind boilerplate-doc.idx
+	lualatex --shell-escape boilerplate-doc.tex
 	mkdir -p $(texmf)/doc
-	cp documentation.pdf $(texmf)/doc/$(jobname).pdf
+	cp boilerplate-doc.pdf $(texmf)/doc/$(jobname).pdf
 
 doc_lua:
 	ldoc .
@@ -41,8 +41,8 @@ ctan: doc_pdf
 	cp -f $(jobname).lua $(jobname)/
 	cp -f $(jobname).sty $(jobname)/
 	cp -f $(jobname).tex $(jobname)/
-	cp -f documentation.pdf $(jobname)/$(jobname).pdf
-	cp -f documentation.tex $(jobname)/
+	cp -f boilerplate-doc.pdf $(jobname)/$(jobname).pdf
+	cp -f boilerplate-doc.tex $(jobname)/
 	tar cvfz $(jobname).tar.gz $(jobname)
 	rm -rf $(jobname)
 
