@@ -13,4 +13,5 @@ _minted*/
 *.pdf
 *.synctex
 *.synctex.gz
+*.tar.gz
 *.toc
