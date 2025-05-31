@@ -41,7 +41,7 @@ ctan: doc_pdf
 	cp -f $(jobname).lua $(jobname)/
 	cp -f $(jobname).sty $(jobname)/
 	cp -f $(jobname).tex $(jobname)/
-	cp -f $(jobname)-doc.pdf $(jobname)/$(jobname).pdf
+	cp -f $(jobname)-doc.pdf $(jobname)/
 	cp -f $(jobname)-doc.tex $(jobname)/
 	tar cvfz $(jobname).tar.gz $(jobname)
 	rm -rf $(jobname)
