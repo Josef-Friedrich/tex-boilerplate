@@ -29,6 +29,47 @@ version 2008/05/04 or later.
 
 Josef Friedrich <josef@friedrich.rocks>
 
+# CTAN
+
+Since July 2015 the jobname package is included in the Comprehensive TeX
+Archive Network (CTAN).
+
+* TeX archive: http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname
+* Package page: https://www.ctan.org/pkg/jobname
+
+# Distributions
+
+* MiKTeX: https://miktex.org/packages/jobname
+* TeX Live:
+  * run files:
+    * [jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua) texmf-dist/scripts/jobname/jobname.lua
+    * [jobname.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.tex) texmf-dist/tex/luatex/jobname/jobname.tex
+    * [jobname.sty](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.sty) texmf-dist/tex/luatex/jobname/jobname.sty
+  * doc files:
+    * [jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.tex
+    * [jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.pdf
+    * [README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md) texmf-dist/doc/luatex/jobname/README.md
+
+# Repository
+
+https://github.com/Josef-Friedrich/jobname
+
+# Documentation
+
+* [User documentation as a PDF](http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname/jobname.pdf)
+
+# Installation
+
+## TeX Live
+
+    tlmgr install jobname
+
+## Manually
+
+    git clone git@github.com:Josef-Friedrich/jobname.git
+    cd jobname
+    make install
+
 ### Using make (assumes your TeX environment takes `$HOME/texmf` into account)
 
     make install
