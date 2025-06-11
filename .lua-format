@@ -1,4 +1,5 @@
 # https://github.com/Koihik/LuaFormatter/blob/master/docs/Style-Config.md
+# VS code: Koihik.vscode-lua-format
 align_args: false
 align_parameter: false
 break_after_functioncall_lp: false
