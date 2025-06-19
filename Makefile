@@ -17,6 +17,7 @@ install_quick:
 	cp -f $(jobname).tex $(installdir)
 
 doc: doc_pdf doc_lua
+	xdg-open $(jobname)-doc.pdf > /dev/null 2>&1
 
 doc_pdf:
 	lualatex --shell-escape $(jobname)-doc.tex
