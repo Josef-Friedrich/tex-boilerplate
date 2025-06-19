@@ -55,7 +55,8 @@ Network (CTAN) since July 2015.
 ### Repository
 
 The [Git repository](https://github.com/Josef-Friedrich/jobname) in
-which the development takes place is hosted on GitHub.
+which the development takes place is hosted on
+[GitHub](https://github.com).
 
 ## Documentation
 
@@ -139,3 +140,8 @@ git tag v1.4
 make
 make ctan
 ```
+
+### Git mirrors
+
+* [Mirror of svn TeX Live plus development branches](https://git.texlive.info/texlive/)
+* [CTAN daily syncs as git repository](https://git.texlive.info/CTAN/)
