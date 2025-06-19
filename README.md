@@ -29,17 +29,18 @@ version 2008/05/04 or later.
 
 Josef Friedrich <josef@friedrich.rocks>
 
-# CTAN
+## Packaging
 
-Since July 2015 the jobname package is included in the Comprehensive TeX
-Archive Network (CTAN).
+### CTAN
 
-* TeX archive: http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname
-* Package page: https://www.ctan.org/pkg/jobname
+The `jobname` package has been included in the Comprehensive TeX Archive
+Network (CTAN) since July 2015.
 
-# Distributions
+* [Package page](https://www.ctan.org/pkg/jobname)
+* [Sources](https://www.ctan.org/tex-archive/macros/luatex/generic/jobname)
 
-* MiKTeX: https://miktex.org/packages/jobname
+### Distributions
+
 * TeX Live:
   * run files:
     * [jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua) texmf-dist/scripts/jobname/jobname.lua
@@ -49,22 +50,24 @@ Archive Network (CTAN).
     * [jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.tex
     * [jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.pdf
     * [README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md) texmf-dist/doc/luatex/jobname/README.md
+* [MiKTeX](https://miktex.org/packages/jobname)
 
-# Repository
+### Repository
 
-https://github.com/Josef-Friedrich/jobname
+The [Git repository](https://github.com/Josef-Friedrich/jobname) in
+which the development takes place is hosted on GitHub.
 
-# Documentation
+## Documentation
 
 * [User documentation as a PDF](http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname/jobname.pdf)
 
-# Installation
+## Installation
 
-## TeX Live
+### TeX Live
 
     tlmgr install jobname
 
-## Manually
+### Manually
 
     git clone git@github.com:Josef-Friedrich/jobname.git
     cd jobname
@@ -91,7 +94,7 @@ https://github.com/Josef-Friedrich/jobname
     mkdir -p $HOME/texmf/doc/luatex/jobname
     cp -f jobname.pdf $HOME/texmf/doc/luatex/jobname
 
-# Development
+## Development
 
 First delete the stable version installed by TeX Live. Because the
 package `jobname` belongs to the collection `collection-latexextra`, the
@@ -99,7 +102,7 @@ option  `--force` must be used to delete the package.
 
     tlmgr remove --force jobname
 
-## Deploying a new version
+### Deploying a new version
 
 Update the version number in the file `jobname.dtx` on this locations:
 
