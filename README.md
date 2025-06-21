@@ -43,13 +43,13 @@ Network (CTAN) since July 2015.
 
 * TeX Live:
   * run files:
-    * [texmf-dist/scripts/jobname/jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua)
-    * [texmf-dist/tex/luatex/jobname/jobname.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.tex)
-    * [texmf-dist/tex/luatex/jobname/jobname.sty](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.sty)
+    * [scripts/jobname/jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua)
+    * [tex/luatex/jobname/jobname.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.tex)
+    * [tex/luatex/jobname/jobname.sty](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.sty)
   * doc files:
-    * [texmf-dist/doc/luatex/jobname/jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.tex)
-    * [texmf-dist/doc/luatex/jobname/jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.pdf)
-    * [texmf-dist/doc/luatex/jobname/README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md)
+    * [doc/luatex/jobname/jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.tex)
+    * [doc/luatex/jobname/jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.pdf)
+    * [doc/luatex/jobname/README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md)
 * [MiKTeX](https://miktex.org/packages/jobname)
 
 ### Repository
