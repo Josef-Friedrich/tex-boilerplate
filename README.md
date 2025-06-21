@@ -43,13 +43,13 @@ Network (CTAN) since July 2015.
 
 * TeX Live:
   * run files:
-    * [jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua) texmf-dist/scripts/jobname/jobname.lua
-    * [jobname.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.tex) texmf-dist/tex/luatex/jobname/jobname.tex
-    * [jobname.sty](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.sty) texmf-dist/tex/luatex/jobname/jobname.sty
+    * [texmf-dist/scripts/jobname/jobname.lua](https://tug.org/svn/texlive/trunk/Master/texmf-dist/scripts/jobname/jobname.lua)
+    * [texmf-dist/tex/luatex/jobname/jobname.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.tex)
+    * [texmf-dist/tex/luatex/jobname/jobname.sty](https://tug.org/svn/texlive/trunk/Master/texmf-dist/tex/luatex/jobname/jobname.sty)
   * doc files:
-    * [jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.tex
-    * [jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname.pdf) texmf-dist/doc/luatex/jobname/jobname-doc.pdf
-    * [README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md) texmf-dist/doc/luatex/jobname/README.md
+    * [texmf-dist/doc/luatex/jobname/jobname-doc.tex](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.tex)
+    * [texmf-dist/doc/luatex/jobname/jobname-doc.pdf](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/jobname-doc.pdf)
+    * [texmf-dist/doc/luatex/jobname/README.md](https://tug.org/svn/texlive/trunk/Master/texmf-dist/doc/luatex/jobname/README.md)
 * [MiKTeX](https://miktex.org/packages/jobname)
 
 ### Repository
@@ -60,7 +60,7 @@ which the development takes place is hosted on
 
 ## Documentation
 
-* [User documentation as a PDF](http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname/jobname.pdf)
+[User documentation as a PDF](http://mirror.ctan.org/tex-archive/macros/luatex/generic/jobname/jobname.pdf)
 
 ## Installation
 
