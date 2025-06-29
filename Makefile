@@ -16,7 +16,7 @@ install_quick:
 	cp -f $(jobname).sty $(installdir)
 	cp -f $(jobname).tex $(installdir)
 
-doc: doc_pdf doc_lua
+doc: doc_pdf
 	xdg-open $(jobname)-doc.pdf > /dev/null 2>&1
 
 doc_pdf:
@@ -26,13 +26,6 @@ doc_pdf:
 	lualatex --shell-escape $(jobname)-doc.tex
 	mkdir -p $(texmf)/doc
 	cp $(jobname)-doc.pdf $(texmf)/doc/$(jobname).pdf
-
-doc_lua:
-	ldoc .
-
-doc_lua_open:
-	ldoc .
-	xdg-open docs/index.html
 
 ctan: doc_pdf
 	rm -rf $(jobname).tar.gz
